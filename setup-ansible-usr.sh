@@ -28,11 +28,7 @@ ansible "$host" -u "$default_usr" -b \
 
 ansible "$host" -u "$default_usr" -b \
     -e ansible_become_pass='{{ lookup( "env", "DEFAULT_USR_PWD") }}' \
-    -m file -a 'path=/etc/sudoers.d/ansible state=touch mode=0644'
-
-ansible "$host" -u "$default_usr" -b \
-    -e ansible_become_pass='{{ lookup( "env", "DEFAULT_USR_PWD") }}' \
-    -m blockinfile -a 'path=/etc/sudoers.d/ansible block="ansible ALL=(ALL) NOPASSWD: ALL" state=present'
+    -m copy -a 'dest=/etc/sudoers.d/ansible content="ansible ALL=(ALL) NOPASSWD: ALL" mode=0440 validate="visudo -cf %s"'
 
 
 # Setup ssh access
