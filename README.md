@@ -14,6 +14,8 @@
 - install repositories:
   - epel-release
 - install packages:
+  - vim
   - restic
 - setup data drive
+- add tests
 
