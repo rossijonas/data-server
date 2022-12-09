@@ -1,0 +1,7 @@
+---
+- name: Deploy data-server in Rocky Linux OS. 
+  hosts: all
+  vars-files:
+    - variables.yaml
+
+
