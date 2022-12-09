@@ -1,7 +1,11 @@
 ---
 - name: Deploy data-server in Rocky Linux OS. 
   hosts: all
-  vars-files:
+
+  vars_files:
     - variables.yaml
 
-
+  tasks:
+    - name:
+      import_tasks: tasks/repositories.yaml
+      tags: ['repositories']
