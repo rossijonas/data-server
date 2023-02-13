@@ -1,0 +1,11 @@
+---
+- name: Deploy data-server in Rocky Linux OS. 
+  hosts: all
+
+  vars_files:
+    - variables.yml
+
+  tasks:
+    - name: System's post install configuration
+      import_tasks: tasks/post-install.yml
+      tags: ['post-install']

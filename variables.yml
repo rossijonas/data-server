@@ -1,0 +1,7 @@
+---
+
+# gerrlingguy.security
+security_ssh_allowed_users:
+  - mike
+  - ansible
+security_autoupdate_enabled: false
