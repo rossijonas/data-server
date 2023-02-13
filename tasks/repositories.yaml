@@ -1,5 +1,0 @@
----
-- name: Install EPEL repository.
-  package:
-    name: epel-release
-    state: present

@@ -1,0 +1,8 @@
+---
+# From Ansible Galaxy
+- src: geerlingguy.repo-epel
+- src: linux-system-roles.storage
+
+# From Github
+- name: dnfupdate
+  src: https://github.com/rossijonas/ansible-role-dnf-update

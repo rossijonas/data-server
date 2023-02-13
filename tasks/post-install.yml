@@ -1,0 +1,13 @@
+---
+- name: Update system.
+  import_role:
+    name: dnfupdate
+
+- name: Basic security configuration.
+  import_role:
+    name: geerlingguy.security
+
+- name: Install EPEL repository.
+  package:
+    name: epel-release
+    state: present
