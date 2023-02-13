@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip3 install ansible ansible-galaxy
+          python3 -m pip install --user ansible
           anisble-galaxy install -r requirements.yml
 
       - name: Syntax-check
