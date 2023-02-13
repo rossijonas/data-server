@@ -1,6 +1,6 @@
 ---
 # From Ansible Galaxy
-- src: geerlingguy.repo-epel
+- src: geerlingguy.security
 - src: linux-system-roles.storage
 
 # From Github
