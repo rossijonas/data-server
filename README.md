@@ -12,14 +12,9 @@
 
 ## Backlog
 
-- improve ssh config
 - improve DNF config
-- upgrade OS
-- install repositories:
-  - epel-release
 - install packages:
   - vim
   - restic
 - setup data drive
 - add tests
-

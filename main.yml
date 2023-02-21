@@ -1,5 +1,5 @@
 ---
-- name: Deploy data-server in Rocky Linux OS. 
+- name: Deploy data-server in Rocky Linux OS.
   hosts: all
 
   vars_files:

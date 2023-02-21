@@ -18,11 +18,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --user ansible
+          python3 -m pip install --user ansible ansible-lint
           ansible-galaxy install -r requirements.yml
 
       - name: Syntax-check
-        run: ansible-playbook main.yml --syntax-check
+        run: |
+          ansible-playbook main.yml --syntax-check
+          ansible-lint .
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
