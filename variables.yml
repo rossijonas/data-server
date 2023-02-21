@@ -1,5 +1,4 @@
 ---
-
 # gerrlingguy.security
 security_ssh_allowed_users:
   - mike
