@@ -6,6 +6,10 @@
     - variables.yml
 
   tasks:
-    - name: System's post install configuration
+    - name: System's post install configuration.
       import_tasks: tasks/post-install.yml
       tags: ['post-install']
+
+    - name: Configure storage.
+      import_tasks: tasks/storage.yml
+      tags: ['storage']
