@@ -1,0 +1,14 @@
+---
+- name: Storage.
+  import_role:
+    name: linux-system-roles.storage
+  vars:
+    storage_pools:
+      - name: data-pool
+        disks:
+          - sda
+        volumes:
+          - name: data-vol
+            size: "100%"
+            mount_point: "/mnt/data"
+            state: present

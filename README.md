@@ -16,5 +16,4 @@
 - install packages:
   - vim
   - restic
-- setup data drive
 - add tests
