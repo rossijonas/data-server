@@ -16,7 +16,12 @@ storage_pools:
         mount_point: "/mnt/data"
         state: present
 
+# tasks/storage.yml
+storage_owner: mike
+storage_dir: "/mnt/data"
+
 # tasks/packages.yml
 packages:
   - vim
   - restic
+  - rsync
