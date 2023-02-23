@@ -13,3 +13,7 @@
     - name: Configure storage.
       import_tasks: tasks/storage.yml
       tags: ['storage']
+
+    - name: Install packages.
+      import_tasks: tasks/packages.yml
+      tags: ['packages']
