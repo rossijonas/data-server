@@ -2,3 +2,8 @@
 - name: Congifure storage.
   import_role:
     name: linux-system-roles.storage
+
+- name: Configure data directory.
+  file:
+    path: "{{ storage_dir }}"
+    owner: "{{ storage_owner }}"
