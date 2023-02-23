@@ -3,7 +3,7 @@
   template:
     src: templates/dnf.conf.j2
     dest: /etc/dnf/dnf.conf
-    mode: 0644
+    mode: u=rw,g=r,o=r
 
 - name: Update system.
   import_role:
