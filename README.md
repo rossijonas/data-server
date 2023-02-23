@@ -12,8 +12,5 @@
 
 ## Backlog
 
-- improve DNF config
-- install packages:
-  - vim
-  - restic
-- add tests
+- instructions in README file
+- ansible tests

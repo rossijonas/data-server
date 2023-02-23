@@ -1,6 +1,22 @@
 ---
-# gerrlingguy.security
+# tasks/post-install.yml | geerlingguy.security
 security_ssh_allowed_users:
   - mike
   - ansible
 security_autoupdate_enabled: false
+
+# tasks/storage.yml | linux-system-roles.storage
+storage_pools:
+  - name: data-pool
+    disks:
+      - sda
+    volumes:
+      - name: data-vol
+        size: "100%"
+        mount_point: "/mnt/data"
+        state: present
+
+# tasks/packages.yml
+packages:
+  - vim
+  - restic
